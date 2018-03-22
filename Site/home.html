@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+     <head>
+     <title>Home</title>
+     <meta charset="utf-8">
+     <link rel="icon" href="images/favicon.ico">
+     <link rel="shortcut icon" href="images/ic.png" />
+     <link rel="stylesheet" href="css/style.css">
+     <script src="js/jquery.js"></script>
+     <script src="js/jquery-migrate-1.1.1.js"></script>
+     <script src="js/jquery.equalheights.js"></script>
+     <script src="js/jquery.ui.totop.js"></script>
+     <script src="js/jquery.easing.1.3.js"></script>
+     <script>
+        $(document).ready(function(){
+          $( ".block1" ).mouseover(function() {
+            $(this).addClass( "blur" );
+          });
+          $( ".block1" ).mouseout(function() {
+            $(this).removeClass( "blur" );
+          });
+          $().UItoTop({ easingType: 'easeOutQuart' });
+        })
+     </script>
+     <!--[if lt IE 8]>
+       <div style=' clear: both; text-align:center; position: relative;'>
+         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+         </a>
+    <![endif]-->
+    <!--[if lt IE 9]>
+
+      <script src="js/html5shiv.js"></script>
+      <link rel="stylesheet" media="screen" href="css/ie.css">
+    <![endif]-->
+    <!--[if lt IE 10]>
+      <link rel="stylesheet" media="screen" href="css/ie1.css">
+    <![endif]-->
+
+     </head>
+     <body class="page1">
+
+<!--==============================header=================================-->
+ <header>
+  <div class="container_12">
+   <div class="grid_12">
+    <div class="socials">
+      <a href="#"></a>
+      <a href="#"></a>
+      <a href="#"></a>
+      <a href="#" class="last"></a>
+    </div>
+    <a href="index.html"><img src="images/logo.png" width="1000" align="center" height="250" alt="Boo House"></a> </h1>
+    <div class="menu_block">
+
+
+    <nav id="bt-menu" class="bt-menu">
+        <a href="#" class="bt-menu-trigger"><span>Menu</span></a>
+        <ul>
+          <li class="current bt-icon "><a href="home.html">Home</a></li>
+         <li class="bt-icon"><a href="register.html">Register</a></li>
+         <li class="bt-icon"><a href="menu.html">Menu</a></li>
+         <!--<li class="bt-icon"><a href="index-3.html">Blog</a></li>
+         <li class="bt-icon"><a href="index-4.html">Reservation</a></li>-->
+         <li class="bt-icon"><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+ <div class="clear"></div>
+</div>
+<div class="clear"></div>
+          </div>
+      </div>
+</header>
+
+<!--=====<li class="bt-icon"><a href="index-4.html">Reservation</a></li>=========================Content=================================-->
+
+<div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - December 02, 2013!</div>
+<a href="home.html" class="block1">
+  <img src="images/dosa.jpg" alt="">
+  <span class="price"><span>Schezwan Masala Dosa</span><span><small>₹</small>52</span><strong></strong></span>
+</a>
+<a href="home.html" class="block1">
+  <img src="images/noodles.jpg" alt="">
+  <span class="price"><span>Singapore Noodles</span><span><small>₹</small>73</span><strong></strong></span>
+</a>
+<a href="home.html" class="block1">
+  <img src="images/missal.jpg" alt="">
+  <span class="price"><span>Misal Pav</span>
+<span><small>₹</small>42</span><strong></strong></span>
+</a>
+
+  <div class="container_12">
+    <div class="grid_12">
+      <h3>New in Menu</h3>
+    </div>
+    <div class="grid_3">
+      <div class="box maxheight">
+        <img src="images/angur.jpg" alt="">
+        <div class="title">Angoori Ras Malai</div>
+      Classical Indian Sweet
+        <br>
+        <!--<a href="#">More Info</a>-->
+      </div>
+    </div>
+    <div class="grid_3">
+      <div class="box maxheight">
+        <img src="images/pasta.jpg" alt="">
+        <div class="title">Pasta in White Sauce</div>
+      An Italian Dish
+        <br>
+        <!--<a href="#">More Info</a>-->
+      </div>
+    </div>
+    <div class="grid_3">
+      <div class="box maxheight">
+        <img src="images/maxresdefault.jpg" alt="">
+        <div class="title">Masala Uttappa</div>
+      A South Indian Taste
+        <br>
+        <!--<a href="#">More Info</a>-->
+      </div>
+    </div>
+    <div class="grid_3">
+      <div class="box maxheight">
+        <img src="images/wm.jpg" alt="">
+        <div class="title">Watermelon Juice</div>
+        A Tropical Drink to hydrate You
+        <br>
+        <!--<a href="#">More Info</a>-->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--==============================footer=================================-->
+
+<footer>
+  <div class="container_12">
+    <div class="grid_6 prefix_3">
+      <a href="index.html" class="f_logo"><img src="images/f_logo.png" alt=""></a>
+      <div class="copy">
+      &copy; 2013 | <a href="#">Privacy Policy</a> <br> Website   designed by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a>
+      </div>
+    </div>
+  </div>
+</footer>
+     <script>
+      $(document).ready(function(){
+         $(".bt-menu-trigger").toggle(
+          function(){
+            $('.bt-menu').addClass('bt-menu-open');
+          },
+          function(){
+            $('.bt-menu').removeClass('bt-menu-open');
+          }
+        );
+      })
+    </script>
+</body>
+</html>

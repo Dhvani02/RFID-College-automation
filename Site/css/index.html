@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>canteen</title>
+    <link rel="author" href="humans.txt" />
+    <script type="text/javascript" src="js/jquery.min.1.7.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style_2.css" />
+</head>
+
+<body>
+    <div id="container" class="wrapper">
+        <ul id="scene" class="scene unselectable" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="15">
+            <li class="layer" data-depth="0.00"></li>
+            <li class="layer" data-depth="0.10">
+               <div id="particles" class="background"> </div>
+            </li>
+            <li class="layer" data-depth="0.3" style="display: flex;height: 100vh">
+                <img src="images1/black.png" class="logo" data-depth="0.3">
+
+                <h1 id=logo>D.J. Sanghvi Canteen</h1>
+            </li>
+           
+        </ul>
+        <section id="about" class="wrapper about hide accelerate">
+            <div class="cell accelerate">
+                <div class="cables center accelerate">
+                    <div class="panel" style="background-color: #d7d7b3">
+                        <header>
+                            <h1><em style="color: #FFF;text-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);font-size:4rem">D.J. Sanghvi Canteen</em></h1>
+                        </header>
+                        <p style="color: #fff">
+                            <strong>DJ SANGHVI CANTEEN</strong> is one of the finest canteen in Mumbai. It is a perfect blend of old and new tastes. All the delicacies will leave you licking your fingers. Our all dishes are master finish.
+                        </p>
+                        <ul class="links">
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="menu.html">Menu</a></li>
+                            <li><a href="register.html">Register</a></li> 
+                            <li><a href="contact.html">Contact Us</a></li>                                      
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <button id="toggle" class="toggle i">
+            <div class="cross">
+                <div class="x"></div>
+                <div class="y"></div>
+            </div>
+        </button>
+ 
+    </div>
+    <!-- Scripts -->
+    <script src="js/jquery.parallax.js"></script>
+    <script src="js/libraries.js"></script>
+ <script src="js/jquery.particleground.js"></script>
+    <script>
+    // jQuery Selections
+    var $html = $('html'),
+        $container = $('#container'),
+        $prompt = $('#prompt'),
+        $toggle = $('#toggle'),
+        $about = $('#about'),
+        $scene = $('#scene');
+
+    // Hide browser menu.
+    (function() {
+        setTimeout(function() {
+            window.scrollTo(0, 0);
+        }, 0);
+    })();
+
+    // Setup FastClick.
+    FastClick.attach(document.body);
+
+    // Add touch functionality.
+    if (Hammer.HAS_TOUCHEVENTS) {
+        $container.hammer({
+            drag_lock_to_axis: true
+        });
+        _.tap($html, 'a,button,[data-tap]');
+    }
+
+    // Add touch or mouse class to html element.
+    $html.addClass(Hammer.HAS_TOUCHEVENTS ? 'touch' : 'mouse');
+
+    // Resize handler.
+    (resize = function() {
+        $scene[0].style.width = window.innerWidth + 'px';
+        $scene[0].style.height = window.innerHeight + 'px';
+        if (!$prompt.hasClass('hide')) {
+            if (window.innerWidth < 600) {
+               // $toggle.addClass('hide');
+            } else {
+                $toggle.removeClass('hide');
+            }
+        }
+    })();
+
+    // Attach window listeners.
+    window.onresize = _.debounce(resize, 200);
+    window.onscroll = _.debounce(resize, 200);
+
+    function showDetails() {
+        $about.removeClass('hide');
+        $toggle.removeClass('i');
+    }
+
+    function hideDetails() {
+        $about.addClass('hide');
+        $toggle.addClass('i');
+    }
+
+    // Listen for toggle click event.
+    $toggle.on('click', function(event) {
+        $toggle.hasClass('i') ? showDetails() : hideDetails();
+    });
+
+    // Pretty simple huh?
+    $scene.parallax();
+
+    // Check for orientation support.
+    setTimeout(function() {
+        if ($scene.data('mode') === 'cursor') {
+            $prompt.removeClass('hide');
+            if (window.innerWidth < 600) $toggle.addClass('hide');
+            $prompt.on('click', function(event) {
+                $prompt.addClass('hide');
+                if (window.innerWidth < 600) {
+                    setTimeout(function() {
+                        $toggle.removeClass('hide');
+                    }, 1200);
+                }
+            });
+        }
+    }, 1000);
+    </script>
+    <script type="text/javascript">
+    // jQuery plugin example:
+    $(document).ready(function() {
+        $('#particles').particleground({
+            dotColor: '#fff',
+            lineColor: '#5cbdaa'
+        });
+        $('.intro').css({
+            'margin-top': -($('.intro').height() / 2)
+        });
+    });
+    </script>
+    
+</body>
+
+</html>

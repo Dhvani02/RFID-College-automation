@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login & Sign Up Form Concept</title>
+
+
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300'>
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+
+      <link rel="stylesheet" href="css2/STYLE.css">
+      <meta charset="utf-8">
+      <link rel="icon" href="images/favicon.ico">
+      <link rel="shortcut icon" href="images/ic.png" />
+      <link rel="stylesheet" href="css/style.css">
+      <script src="js/jquery.js"></script>
+      <script src="js/jquery-migrate-1.1.1.js"></script>
+      <script src="js/jquery.equalheights.js"></script>
+      <script src="js/jquery.ui.totop.js"></script>
+      <script src="js/jquery.easing.1.3.js"></script>
+      <script>
+         $(document).ready(function(){
+           $( ".block1" ).mouseover(function() {
+             $(this).addClass( "blur" );
+           });
+           $( ".block1" ).mouseout(function() {
+             $(this).removeClass( "blur" );
+           });
+           $().UItoTop({ easingType: 'easeOutQuart' });
+         })
+      </script>
+
+
+
+</head>
+<header>
+  <div class="container_12">
+   <div class="grid_12">
+    <div class="socials">
+      <a href="#"></a>
+      <a href="#"></a>
+      <a href="#"> </a>
+      <a href="#" class="last"></a>
+    </div>
+    <a href="index.html"><img src="images/logo.png" width="1000" align="center" height="250" alt="Boo House"></a>
+    <div class="menu_block">
+
+
+    <nav id="bt-menu" class="bt-menu">
+        <a href="#" class="bt-menu-trigger"><span>Menu</span></a>
+        <ul>
+          <li class="bt-icon "><a href="home.html">Home</a></li>
+         <li class="current bt-icon"><a href="register.html">Register</a></li>
+         <li class="bt-icon"><a href="menu.html">Menu</a></li>
+         <!--<li class="bt-icon"><a href="index-3.html">Blog</a></li>
+         <li class="bt-icon"><a href="index-4.html">Reservation</a></li>-->
+         <li class="bt-icon"><a href="contact.html">Contacts</a></li>
+        </ul>
+      </nav>
+
+ <div class="clear"></div>
+</div>
+<div class="clear"></div>
+          </div>
+      </div>
+  </header>
+<body>
+
+  <div class="cotn_principal">
+<div class="cont_centrar">
+
+  <div class="cont_login">
+<div class="cont_info_log_sign_up">
+      <div class="col_md_login">
+<div class="cont_ba_opcitiy">
+
+        <h>ADMIN LOGIN</h2>
+  <p>Click here to login.</p>
+  <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+  </div>
+  </div>
+<div class="col_md_sign_up">
+<div class="cont_ba_opcitiy">
+  <h2>REGISTER</h2>
+<p> Click here to register </p>
+
+ <!-- <p>New here? Click below to register</p>-->
+
+  <button class="btn_sign_up" onclick="cambiar_sign_up()">REGISTER</button>
+</div>
+  </div>
+       </div>
+
+
+    <div class="cont_back_info">
+       <div class="cont_img_back_grey">
+       <img src="css2/dj.png" alt="" />
+       </div>
+
+    </div>
+   
+<div class="cont_forms" >
+    <div class="cont_img_back_">
+       <img src="css2/djcollege.jpg" alt="" />
+       </div>
+           <form action="admin_login.php" method="post">
+ <div class="cont_form_login">
+<a href="index.html" onclick="ocultar_login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
+   <h2>LOGIN</h2>
+ <input type="text" name="usr" placeholder="Username" />
+<input type="password" name="pass" placeholder="Password" />
+<button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+  </div>
+  </form>
+  <form action="include.php" method="post">
+   <div class="cont_form_sign_up">
+    <a href="" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+     <h2>REGISTER</h2>
+  
+<input type="text" name="rfid" placeholder="RFID" />
+<input type="text" name="mob" placeholder="Phone" />
+<input type="text" name="amt" placeholder="Amount" />
+<!--<input type="text" placeholder="Confirm Amount" />-->
+<button class="btn_sign_up" onclick="cambiar_sign_up()">Register</button>
+</form>
+  </div>
+
+    </div>
+
+  </div>
+ </div>
+</div>
+
+
+
+    <script  src="js1/index.js"></script>
+
+
+
+
+</body>
+<script>
+ $(document).ready(function(){
+    $(".bt-menu-trigger").toggle(
+     function(){
+       $('.bt-menu').addClass('bt-menu-open');
+     },
+     function(){
+       $('.bt-menu').removeClass('bt-menu-open');
+     }
+   );
+ })
+</script>
+
+</html>
